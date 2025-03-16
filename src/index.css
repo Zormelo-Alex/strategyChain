@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --primaryColor: #70befa;
+}
+
+.font-man {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.glass {
+  background: #0000004d;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #ffffff0d;
+}
+
+@keyframes glowing-border {
+  0% {
+    border-image-source: linear-gradient(0deg, #000, #fff);
+  }
+  25% {
+    border-image-source: linear-gradient(90deg, #000, #70befa);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, #000, #fff);
+  }
+  75% {
+    border-image-source: linear-gradient(270deg, #000, #70befa);
+  }
+  100% {
+    border-image-source: linear-gradient(360deg, #000, #fff);
+  }
+}
+
+.animate-glow {
+  border-width: 1px;
+  border-image-slice: 1;
+  border-radius: 2px;
+  animation: glowing-border 3s linear infinite;
+}
