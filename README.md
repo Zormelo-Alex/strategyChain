@@ -1,4 +1,4 @@
-# AI-Powered Web3 Development with React + Vite  
+# AI-Powered Web3 Development 
 
 This project leverages the power of **AI** to enhance **Web3 capabilities**, providing a seamless and intelligent experience for **decentralized applications (dApps)**. Built with **React and Vite**, it ensures high performance, fast development cycles, and a robust foundation for AI-driven blockchain solutions.  
 
