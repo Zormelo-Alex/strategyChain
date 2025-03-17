@@ -53,10 +53,10 @@ const Navbar = () => {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="text-[14px] relative overflow-hidden px-6 py-3 text-white text-lg font-[500] rounded-[8px] bg-[#0F0F0F] transition-all duration-300"
+        className="text-[14px] relative overflow-hidden px-6 py-3 text-white text-lg font-[500] rounded-[8px] transition-all duration-300"
       >
         <span className="relative z-10">Deploy Agent</span>
-        <span className="absolute inset-0 border-[1px] border-transparent rounded-[8px] animate-glow"></span>
+        <span className="absolute inset-0 border-transparent rounded-[8px] animate-glow"></span>
       </motion.button>
      
     </motion.div>

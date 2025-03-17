@@ -29,7 +29,7 @@
 }
 
 .animate-move-glow {
-  animation: moveGlow 10s infinite ease-in-out, glow 4s infinite ease-in-out;
+  animation: moveGlow 20s infinite ease-in-out, glow 4s infinite ease-in-out;
 }
 
 .bg-glass {

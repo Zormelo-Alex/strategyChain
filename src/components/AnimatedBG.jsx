@@ -6,10 +6,10 @@ const AnimatedBG = () => {
 
   useEffect(() => {
     // Create random circles
-    const numCircles = 6; // Number of circles
+    const numCircles = 8; // Number of circles
     const newCircles = [];
     for (let i = 0; i < numCircles; i++) {
-      const size = Math.random() * 200 + 200; // Random size between 100px and 300px
+      const size = Math.random() * 200 + 300; // Random size between 100px and 300px
       const positionX = Math.random() * 100; // Random X position percentage (0 to 100)
       const positionY = Math.random() * 100; // Random Y position percentage (0 to 100)
       const animationDelay = Math.random() * 4 + "s"; // Random delay for animations

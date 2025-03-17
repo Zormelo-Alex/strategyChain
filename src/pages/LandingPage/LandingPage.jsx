@@ -11,7 +11,7 @@ const LandingPage = () => {
           <br />
           AI-powered agents.
         </h1>
-        <p className="font-[600] text-center  mt-4">
+        <p className="font-[600] text-center mt-4 font-man">
           Deploy your own Blockchain AI Agents with a few Clicks.
         </p>
       </div>
