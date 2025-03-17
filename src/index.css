@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+:root{
+  --primaryColor: #70befa;
+}
 @theme {
   --primaryColor: #70befa;
 }
@@ -14,11 +16,10 @@ body {
 
 .glass {
   background: #0000004d;
-  border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid #ffffff0d;
+  /* border: 1px solid #ffffff0d; */
 }
 
 @keyframes glowing-border {
@@ -44,4 +45,15 @@ body {
   border-image-slice: 1;
   border-radius: 2px;
   animation: glowing-border 3s linear infinite;
+}
+
+.gradient-text-default {
+  background: linear-gradient(
+    to right,
+    rgba(250, 250, 250, 0.8),
+    var(--primaryColor),
+    rgba(250, 250, 250, 0.8)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

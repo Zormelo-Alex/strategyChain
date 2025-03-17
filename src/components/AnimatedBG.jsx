@@ -6,7 +6,7 @@ const AnimatedBG = () => {
 
   useEffect(() => {
     // Create random circles
-    const numCircles = 8; // Number of circles
+    const numCircles = 9; // Number of circles
     const newCircles = [];
     for (let i = 0; i < numCircles; i++) {
       const size = Math.random() * 200 + 300; // Random size between 100px and 300px
@@ -29,13 +29,17 @@ const AnimatedBG = () => {
       {circles.map((circle, index) => (
         <div
           key={index}
-          className="absolute rounded-full bg-[#219bf8] opacity-60 animate-move-glow"
+          className={`absolute rounded-full ${
+            (index == 5 || index == 8) && "bg-black"
+          } ${
+            index % 2 ? "animate-move-glow2" : "animate-move-glow"
+          } bg-[#219bf8] opacity-60`}
           style={{
             width: `${circle.size}px`,
             height: `${circle.size}px`,
             top: `${circle.positionY}%`,
             left: `${circle.positionX}%`,
-            animationDelay: circle.animationDelay,
+            // animationDelay: circle.animationDelay,
           }}
         ></div>
       ))}
