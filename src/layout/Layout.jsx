@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { Navbar } from "../components";
+import { Footer, Navbar } from "../components";
 
 const Layout = () => {
   const location = useLocation();
@@ -15,7 +15,9 @@ const Layout = () => {
       <div className="w-full relative z-[1]">
         <Outlet />
       </div>
-      <div className="pt-[5rem] w-full">{/* <Footer /> */}</div>
+      <div className="pt-[5rem] w-full">
+        <Footer />
+      </div>
     </div>
   );
 };
