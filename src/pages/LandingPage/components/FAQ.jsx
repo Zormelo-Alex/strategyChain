@@ -32,24 +32,24 @@ const FAQ = () => {
         "If your agent runs out of funds, it will pause its operations until additional funds are allocated or replenished by the user.",
     },
     {
-      question: "What makes Strategy Chain different from other automation platforms?",
+      question:
+        "What makes Strategy Chain different from other automation platforms?",
       answer:
         "Strategy Chain stands out due to its seamless AI-blockchain integration, high security, and real-time execution capabilities.",
     },
   ];
-  
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="px-[4rem] py-[6rem] flex justify-center">
+    <div className="px-4 lg:px-[4rem] py-[6rem] flex justify-center">
       <div className="max-w-[1440px] w-full">
-        <h2 className="text-[86px] text-start leading-[95px] tracking-[-.72px]">
+        <h2 className="text-[42px] md:text-[86px] text-center md:text-start leading-[70px] md:leading-[95px] tracking-[-.72px]">
           Freque<span className="gradient-text-default">ntly Asked Que</span>
           stions
         </h2>
-        <div className="mt-[6rem] bg-[#111010] rounded-[10px] px-4">
+        <div className="mt-[4rem] md:mt-[6rem] bg-[#111010] rounded-[10px] px-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -58,7 +58,7 @@ const FAQ = () => {
               }`}
             >
               <button
-                className={`w-full flex justify-between items-center py-[20px] pl-[50px] cursor-pointer hover:text-gray-300 transition  ${
+                className={`w-full flex justify-between items-center py-[20px] pl-[20px] lg:pl-[50px] cursor-pointer hover:text-gray-300 transition  ${
                   openIndex == index
                     ? "rounded-none"
                     : `${index == 0 && "rounded-t-[10px]"} ${
@@ -67,7 +67,7 @@ const FAQ = () => {
                 } `}
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="font-[400] flex items-center gap-3">
+                <span className="font-[400] flex text-start items-center gap-3">
                   <MdOutlineArrowOutward
                     size={20}
                     className="text-(--primaryColor)"

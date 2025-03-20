@@ -8,7 +8,7 @@ const Layout = () => {
     scrollTo(0, 0);
   }, [location.pathname]);
   return (
-    <div className="min-h-screen w-full flex flex-col items-center bg-[#0A0A0A]">
+    <div className="min-h-screen w-full flex flex-col items-center bg-[#0A0A0A] overflow-x-hidden">
       <div className="relative">
         <Navbar />
       </div>

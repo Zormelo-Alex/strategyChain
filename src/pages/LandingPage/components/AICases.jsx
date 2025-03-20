@@ -4,7 +4,7 @@ import img from "../assets/image7.png";
 
 const AICases = () => {
   return (
-    <div className="px-[4rem] py-[6rem] flex justify-center">
+    <div className="p-4 lg:px-[4rem] py-[6rem] flex justify-center">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -32,7 +32,7 @@ const AICases = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-[86px] gradient-text-default text-center"
+            className="text-[42px] lg:text-[86px] gradient-text-default text-center"
           >
             Integrates with
           </motion.h1>

@@ -20,20 +20,20 @@ const Description = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="px-[4rem] py-[6rem] flex justify-center">
+    <div ref={ref} className="p-4 lg:px-[4rem] py-[6rem] flex justify-center">
       <div className="max-w-[1440px]">
         <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           transition={{ staggerChildren: 0.3 }}
-          className="text-[60px] font-[400] leading-[86px]"
+          className="text-[40px] lg:text-[60px] font-[400] leading-[70px] lg:leading-[86px]"
         >
           {/* First Text Line */}
-          <motion.p className="flex gap-2 items-center" variants={textVariants}>
+          <motion.p className="flex gap-2 flex-wrap items-center" variants={textVariants}>
             Strategy{" "}
             <span className="gradient-text-default">Chain is your</span> Knight{" "}
             <motion.span variants={imageVariants}>
-              <img src={img1} alt="png" className="w-[120px]" />
+              <img src={img1} alt="png" className="w-[89px] lg:w-[120px]" />
             </motion.span>
           </motion.p>
 
@@ -43,11 +43,11 @@ const Description = () => {
           </motion.p>
 
           {/* Third Text Line */}
-          <motion.p className="flex gap-2 items-center" variants={textVariants}>
+          <motion.p className="flex gap-2 flex-wrap items-center" variants={textVariants}>
             You,{" "}
             <span className="gradient-text-default">our Kings and Queens</span>{" "}
             <motion.span variants={imageVariants}>
-              <img src={img2} alt="png" className="w-[150px]" />
+              <img src={img2} alt="png" className="w-[110px] lg:w-[150px]" />
             </motion.span>
           </motion.p>
 

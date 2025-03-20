@@ -86,7 +86,7 @@ const Footer = () => {
         </motion.div>
 
         <motion.h1
-          className="text-[166px]"
+          className="text-[50px] xl:text-[166px] mt-8 lg:mt-0 text-center md:text-start"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}

@@ -8,16 +8,16 @@ const Intro = () => {
       <div className="min-h-screen relative">
         <AnimatedBG />
 
-        <div className="relative z-20 p-8 pt-[17rem]">
-          <>
+        <div className="absolute z-20 p-4 lg:p-8 flex w-full items-center justify-center h-full">
+          <div>
             {/* Heading Animation */}
             <motion.h1
-              className="text-[86px] text-center tracking-[-.72px] leading-[86px]"
+              className="text-[42px] md:text-[86px] text-center tracking-[-.72px] leading-[50px] md:leading-[86px]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              Automate.
+              Automate. <br className="md:hidden" />
               <span className="gradient-text-default">Customize</span>. Deploy.
               <br />
               AI-<span className="gradient-text-default">powered agents.</span>
@@ -54,7 +54,7 @@ const Intro = () => {
                 </motion.div>
               </div>
             </motion.div>
-          </>
+          </div>
         </div>
       </div>
     </>

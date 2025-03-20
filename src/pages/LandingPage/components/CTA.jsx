@@ -4,7 +4,7 @@ import { AnimatedBG, Button } from "../../../components";
 
 const CTA = () => {
   return (
-    <div className="px-[4rem] flex justify-center relative">
+    <div className="px-4 lg:px-[4rem] flex justify-center relative">
       <AnimatedBG />
       <motion.div
         className="max-w-[1440px] z-20 flex justify-center items-center h-full w-full py-[12rem]"
@@ -16,7 +16,7 @@ const CTA = () => {
         <div>
           {/* Animated Heading */}
           <motion.h1
-            className="text-[86px] text-center leading-[95px] tracking-[-.72px]"
+            className="text-[42px] lg:text-[86px] text-center leading-[50px] lg:leading-[95px] tracking-[-.72px]"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -24,7 +24,7 @@ const CTA = () => {
           >
             Automate
             <span className="gradient-text-default">
-              .Customize.
+              .<br className="sm:hidden"/>Customize.
             </span>Deploy. <br />
             <span className="gradient-text-default">AI-powered agents.</span>
           </motion.h1>

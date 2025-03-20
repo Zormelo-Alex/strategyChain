@@ -9,10 +9,10 @@ const Partners = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="px-[0rem] py-[6rem] flex justify-center"
+      className="px-4 lg:px-[0rem] py-[6rem] flex justify-center"
     >
       <div className="max-w-[1440px] w-full">
-        <h1 className="text-[86px] text-center leading-[95px] tracking-[-.72px]">
+        <h1 className="text-[40px] lg:text-[86px] text-center leading-[70px] lg:leading-[95px] tracking-[-.72px]">
           Conne
           <span className="gradient-text-default">
             cted Data Sources and{" "}
@@ -32,7 +32,7 @@ const Partners = () => {
           >
             {[...Array(10)].map((item, index) => (
               <div key={index}>
-                <img src={img} alt="logo" className="w-[73px]" />
+                <img src={img} alt="logo" className="min-w-[73px] max-w-[73px]" />
               </div>
             ))}
           </motion.div>
@@ -46,7 +46,7 @@ const Partners = () => {
           >
             {[...Array(10)].map((item, index) => (
               <div key={index}>
-                <img src={img} alt="logo" className="w-[73px]" />
+                <img src={img} alt="logo" className="min-w-[73px] max-w-[73px]" />
               </div>
             ))}
           </motion.div>

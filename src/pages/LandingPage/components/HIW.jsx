@@ -31,10 +31,10 @@ const HIW = () => {
   ];
 
   return (
-    <div className="px-[4rem] py-[6rem] flex justify-center">
-      <div className="max-w-[1440px]">
+    <div className="p-4 lg:px-[4rem] py-[6rem] flex justify-center">
+      <div className="max-w-[1440px] w-full">
         <motion.h1
-          className="text-[86px] gradient-text-default"
+          className="text-[32px] sm:text-[42px] lg:text-[86px] gradient-text-default text-left"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -42,12 +42,12 @@ const HIW = () => {
           How it works
         </motion.h1>
 
-        <div className="grid grid-cols-2 gap-8 mt-10">
+        {/* Grid Layout Responsive */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
           {cardData.map((item, index) => (
-            <Card>
+            <Card key={index}>
               <motion.div
-                key={index}
-                className="glass-b rounded-[10px] p-[40px] max-w-[667px] flex flex-col items-center"
+                className="glass-b rounded-[10px] p-[20px] sm:p-[40px] w-full max-w-[667px] flex flex-col items-center"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -58,13 +58,19 @@ const HIW = () => {
                 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <img src={item.img} alt="" className="w-[586px]" />
-                <div className="flex flex-col items-start justify-start w-[586px] mt-10">
-                  <h2 className="flex gap-2 text-[32px] tracking-[.5px]">
-                    <span className="text-(--primaryColor)">0{index + 1}.</span>
-                    <p>{item.title}</p>
+                <img
+                  src={item.img}
+                  alt=""
+                  className="w-full max-w-[586px] object-contain"
+                />
+                <div className="flex flex-col items-start justify-start w-full max-w-[586px] mt-6 sm:mt-10">
+                  <h2 className="flex gap-2 text-[25px] sm:text-[32px] tracking-[.5px]">
+                    <span className="text-(--primaryColor)">
+                      0{index + 1}.
+                    </span>
+                    <p className="">{item.title}</p>
                   </h2>
-                  <p className="tracking-[.5px] text-[14px] text-[#858585]">
+                  <p className="tracking-[.5px] text-[12px] sm:text-[14px] text-[#858585]">
                     {item.desc}
                   </p>
                 </div>
