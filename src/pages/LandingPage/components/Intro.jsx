@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Intro = () => {
   return (
     <>
-      <div className="min-h-screen relative">
+      <div className="min-h-[700px] h-screen relative">
         <AnimatedBG />
 
         <div className="absolute z-20 p-4 lg:p-8 flex w-full items-center justify-center h-full">
