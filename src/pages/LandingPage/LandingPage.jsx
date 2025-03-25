@@ -6,17 +6,19 @@ import AICases from "./components/AICases";
 import Partners from "./components/Partners";
 import CTA from "./components/CTA";
 import FAQ from "./components/FAQ";
+import Services from "./components/Services";
 
 const LandingPage = () => {
   return (
     <div className="text-white">
       <Intro />
       <Description />
-      <HIW/>
-      <AICases/>
-      <Partners/>
-      <FAQ/>
-      <CTA/>
+      {/* <Services /> */}
+      <HIW />
+      <AICases />
+      <Partners />
+      <FAQ />
+      <CTA />
     </div>
   );
 };

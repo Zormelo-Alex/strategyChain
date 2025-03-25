@@ -16,7 +16,7 @@ const Card = ({ children }) => {
       <motion.div
         className="absolute inset-0 rounded-xl"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, #70befa, transparent 40%)`,
+          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, #1485DB, transparent 40%)`,
         }}
       />
 

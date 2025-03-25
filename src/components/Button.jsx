@@ -1,15 +1,14 @@
 import React from "react";
-import { motion } from "framer-motion";
-import "../css/Btn.css";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Button = ({ children, className = "", onClick }) => {
   return (
-    <button className={`btn-anim cursor-pointer ${className}`} onClick={onClick}>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <button 
+      className={`bg-[#1485DB] hover:bg-(--primaryColor) flex items-center gap-2 text-[14px] font-[500] rounded-[10px] cursor-pointer group transition-all duration-300 ${className}`} 
+      onClick={onClick}
+    >
       {children}
+      <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-2" />
     </button>
   );
 };

@@ -64,7 +64,7 @@ const Navbar = () => {
 
         {/* Deploy Agent Button - Hidden on Mobile */}
         <div className="hidden md:block">
-          <Button className="border border-[#ffffff0d] px-6 py-3 bg-[#0f0f0f43]">
+          <Button className="px-6 py-3">
             Deploy Agent
           </Button>
         </div>

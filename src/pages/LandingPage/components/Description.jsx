@@ -64,8 +64,8 @@ const Description = () => {
           transition={{ duration: 1, delay: 1.2 }}
           className="mt-10"
         >
-          <Button className="text-[14px] px-6 py-3 capitalize !flex items-center gap-2">
-            Deploy an Agent Now <IoMdArrowForward className="text-[18px]" />
+          <Button className="text-[14px] px-6 py-3 capitalize">
+            Deploy an Agent Now
           </Button>
         </motion.div>
       </div>
