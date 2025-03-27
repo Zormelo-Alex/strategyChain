@@ -1,5 +1,5 @@
 @import "tailwindcss";
-:root{
+:root {
   --primaryColor: #70befa;
 }
 @theme {
@@ -30,30 +30,6 @@ body {
   border: 1px solid #ffffff0d;
 }
 
-@keyframes glowing-border {
-  0% {
-    border-image-source: linear-gradient(0deg, #000, #fff);
-  }
-  25% {
-    border-image-source: linear-gradient(90deg, #000, #70befa);
-  }
-  50% {
-    border-image-source: linear-gradient(180deg, #000, #fff);
-  }
-  75% {
-    border-image-source: linear-gradient(270deg, #000, #70befa);
-  }
-  100% {
-    border-image-source: linear-gradient(360deg, #000, #fff);
-  }
-}
-
-.animate-glow {
-  border-width: 1px;
-  border-image-slice: 1;
-  border-radius: 2px;
-  animation: glowing-border 3s linear infinite;
-}
 
 .gradient-text-default {
   background: linear-gradient(
@@ -64,4 +40,24 @@ body {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    rgba(250, 250, 250, 0.8),
+    var(--primaryColor)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-background {
+  background-image: linear-gradient(
+    to right,
+    rgba(250, 250, 250, 0.09),
+    var(--primaryColor),
+    rgba(250, 250, 250, 0.137)
+  ); 
+  background-size: cover;
+  background-position: center;
 }

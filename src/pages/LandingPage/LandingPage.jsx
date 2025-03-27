@@ -7,15 +7,17 @@ import Partners from "./components/Partners";
 import CTA from "./components/CTA";
 import FAQ from "./components/FAQ";
 import Services from "./components/Services";
+import HIWs from "./components/HIWs";
 
 const LandingPage = () => {
   return (
     <div className="text-white">
       <Intro />
       <Description />
-      {/* <Services /> */}
-      <HIW />
+      <Services />
       <AICases />
+      <HIWs/>
+      {/* <HIW /> */}
       <Partners />
       <FAQ />
       <CTA />

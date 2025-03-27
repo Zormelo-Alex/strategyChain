@@ -41,7 +41,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="text-white pb-16 px-8">
+    <footer className="text-white pb-16 px-8 font-man">
       <div className="max-w-[1164px] mx-auto">
         {/* Top Section */}
         <motion.div

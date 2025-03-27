@@ -1,0 +1,41 @@
+.swiper_container {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 37rem;
+  position: relative;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Default dots */
+.custom-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #70befa; /* Light blue */
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Active dot (elongated pill shape) */
+.custom-pagination .swiper-pagination-bullet-active {
+  width: 30px;
+  height: 8px;
+  background-color: #70befa;
+  border-radius: 10px; /* Make it pill-shaped */
+  opacity: 1;
+}

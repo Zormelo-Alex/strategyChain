@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import img from "../assets/image7.png";
+import img from "../assets/image11.png";
+import { Badge, Button } from "../../../components";
 
 const AICases = () => {
   return (
@@ -10,53 +11,70 @@ const AICases = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="max-w-[1440px]"
+        className="max-w-[1440px] w-full"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="glass-b rounded-[10px] py-[60px] px-[40px] relative border border-[#ffffff20] transition-all duration-500 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.2)]"
-        >
-          {/* Animated Glow Effect */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Side (Text) */}
           <motion.div
-            className="absolute inset-0 rounded-[10px] border-[2px] border-transparent animate-glow"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          />
-
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-[42px] lg:text-[86px] gradient-text-default text-center"
           >
-            Integrates with
-          </motion.h1>
+            <Badge>Integrates With</Badge>
+            <h2 className="text-[32px] sm:text-[40px] md:text-[50px] tracking-[-.72px] leading-[40px] sm:leading-[50px] md:leading-[60px] mt-8">
+              <span className="gradient-text-default">
+                Compatible with multiple
+              </span>{" "}
+              <br />
+              <span className="gradient-text-default">
+                AI models, and onchain strategies.
+              </span>
+            </h2>
+            <p className="font-[600] mt-6 text-[14px] sm:text-[16px] md:text-[18px]">
+              Seamlessly connect with powerful AI models to enhance automation,
+              decision-making, and strategic execution on the blockchain.
+            </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            viewport={{ once: true }}
-            className="font-[600] text-center mt-8"
-          >
-            Compatible with multiple AI models, and onchain strategies.
-          </motion.p>
+            {/* Buttons */}
+            <motion.div
+              className="flex justify-start mt-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <div className="flex gap-5 bg-[#0F0F0F] rounded-[10px] px-2 py-2 text-[14px] border border-[#4444441d]">
+                <motion.button
+                  className="px-4 py-2 cursor-pointer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Explore Agents
+                </motion.button>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-            viewport={{ once: true }}
-            className="mt-[6rem]"
-          >
-            <img src={img} alt="Image" />
+                <motion.div whileTap={{ scale: 0.95 }}>
+                  <Button className="px-4 py-2">Deploy Agent</Button>
+                </motion.div>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Side (Image) */}
+          <motion.div
+            className="flex justify-center md:justify-end"
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <img
+              src={img}
+              alt="AI tools"
+              className="w-[80%] sm:w-[400px] md:w-[500px] lg:w-[502px]"
+            />
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );
