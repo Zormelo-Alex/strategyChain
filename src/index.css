@@ -6,6 +6,10 @@
   --primaryColor: #70befa;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .font-man {
   font-family: "Manrope", sans-serif;
 }

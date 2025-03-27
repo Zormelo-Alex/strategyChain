@@ -24,8 +24,10 @@ const CTA = () => {
           >
             Automate
             <span className="gradient-text-default">
-              .<br className="sm:hidden"/>Customize.
-            </span>Deploy. <br />
+              .<br className="sm:hidden" />
+              Customize.
+            </span>
+            Deploy. <br />
             <span className="gradient-text-default">AI-powered agents.</span>
           </motion.h1>
 

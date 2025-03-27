@@ -48,6 +48,7 @@ const HIWs = () => {
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
           >
             <div className="md:col-span-4">
               <h1 className="text-[40px] md:text-[50px] text-start leading-[50px] md:leading-[60px] tracking-[-.72px] text-white">
@@ -84,6 +85,7 @@ const HIWs = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.4 }}
+        viewport={{ once: true }}
       >
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
