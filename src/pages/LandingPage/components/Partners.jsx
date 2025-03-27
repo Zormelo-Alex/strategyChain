@@ -26,7 +26,7 @@ const Partners = () => {
         <h1 className="text-[40px] lg:text-[86px] text-center leading-[70px] lg:leading-[95px] tracking-[-.72px]">
           Conne
           <span className="gradient-text-default">
-            cted Data Sources and{" "}
+            cted Data Sources &{" "}
           </span>{" "}
           Block<span className="gradient-text-default">chain Technolog</span>ies
         </h1>
