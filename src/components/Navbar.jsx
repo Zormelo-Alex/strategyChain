@@ -27,10 +27,10 @@ const Navbar = () => {
         initial={{ opacity: 0, y: -10, scale: 0.9, rotateX: -15 }}
         animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 12 }}
-        className={`font-man fixed z-50 flex items-center justify-between text-white py-4 transition-all duration-[1000ms] origin-center w-full px-8 ${
+        className={`font-man fixed z-50 flex items-center justify-between text-white py-[10px] transition-all duration-[1000ms] origin-center w-full ${
           hasShadow
-            ? "glass rounded-[10px] w-[90%]! md:max-w-[815px] left-1/2 transform -translate-x-1/2 top-4"
-            : "bg-transparent left-1/2 transform -translate-x-1/2 top-0 border-none"
+            ? "glass rounded-[10px] w-[90%]! md:max-w-[815px] left-1/2 transform -translate-x-1/2 top-4 px-2"
+            : "bg-transparent left-1/2 transform -translate-x-1/2 top-0 border-none px-8"
         }`}
       >
         <a
