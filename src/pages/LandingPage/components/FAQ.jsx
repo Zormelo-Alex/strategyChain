@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { Badge } from "../../../components";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -45,7 +46,10 @@ const FAQ = () => {
   return (
     <div className="px-4 lg:px-[4rem] py-[6rem] flex justify-center">
       <div className="max-w-[1440px] w-full">
-        <h2 className="text-[42px] md:text-[86px] text-center md:text-start leading-[70px] md:leading-[95px] tracking-[-.72px]">
+        <Badge className="text-[14px]">
+          FAQ
+        </Badge>
+        <h2 className="text-[42px] md:text-[50px] text-center md:text-start leading-[70px] md:leading-[95px] tracking-[-.72px]">
           Freque<span className="gradient-text-default">ntly Asked Que</span>
           stions
         </h2>

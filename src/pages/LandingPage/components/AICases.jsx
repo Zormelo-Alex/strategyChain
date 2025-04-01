@@ -21,7 +21,7 @@ const AICases = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <Badge>Integrates With</Badge>
+            <Badge className="text-[14px]">Integrates With</Badge>
             <h2 className="text-[32px] sm:text-[40px] md:text-[50px] tracking-[-.72px] leading-[40px] sm:leading-[50px] md:leading-[60px] mt-8">
               <span className="gradient-text-default">
                 Compatible with multiple
@@ -54,7 +54,7 @@ const AICases = () => {
                 </motion.button>
 
                 <motion.div whileTap={{ scale: 0.95 }}>
-                  <Button className="px-4 py-2">Deploy Agent</Button>
+                  <Button className="px-6 py-3">Deploy Agent</Button>
                 </motion.div>
               </div>
             </motion.div>

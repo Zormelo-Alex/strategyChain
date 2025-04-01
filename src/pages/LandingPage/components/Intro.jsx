@@ -50,7 +50,7 @@ const Intro = () => {
                 </motion.button>
 
                 <motion.div whileTap={{ scale: 0.95 }}>
-                  <Button className="px-4 py-2">Deploy Agent</Button>
+                  <Button className="px-6 py-3">Deploy Agent</Button>
                 </motion.div>
               </div>
             </motion.div>
