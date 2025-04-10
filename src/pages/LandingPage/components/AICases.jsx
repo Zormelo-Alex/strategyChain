@@ -22,7 +22,7 @@ const AICases = () => {
             viewport={{ once: true }}
           >
             <Badge className="text-[14px]">Integrates With</Badge>
-            <h2 className="text-[32px] sm:text-[40px] md:text-[50px] tracking-[-.72px] leading-[40px] sm:leading-[50px] md:leading-[60px] mt-8">
+            <h2 className="text-[32px] sm:text-[42px] lg:text-[50px] leading-[60px] tracking-[-.72px] sm:leading-[50px] md:leading-[60px] mt-8">
               <span className="gradient-text-default">
                 Compatible with multiple
               </span>{" "}

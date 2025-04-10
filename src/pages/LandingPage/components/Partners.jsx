@@ -23,7 +23,7 @@ const Partners = () => {
       className="px-4 lg:px-[0rem] py-[6rem] flex justify-center"
     >
       <div className="max-w-[1440px] w-full">
-        <h1 className="text-[40px] lg:text-[50px] text-center leading-[70px] lg:leading-[95px] tracking-[-.72px]">
+        <h1 className="text-[32px] sm:text-[42px] lg:text-[50px] leading-[60px] text-center lg:leading-[95px] tracking-[-.72px]">
           Conne
           <span className="gradient-text-default">
             cted Data Sources &{" "}

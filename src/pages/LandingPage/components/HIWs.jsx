@@ -51,7 +51,7 @@ const HIWs = () => {
             viewport={{ once: true }}
           >
             <div className="md:col-span-4">
-              <h1 className="text-[40px] md:text-[50px] text-start leading-[50px] md:leading-[60px] tracking-[-.72px] text-white">
+              <h1 className="text-[32px] sm:text-[42px] lg:text-[50px] leading-[60px] md:leading-[60px] tracking-[-.72px] text-white">
                 <span className="gradient-text-default">
                   How does the process work
                 </span>

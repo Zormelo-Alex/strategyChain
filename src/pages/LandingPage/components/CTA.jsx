@@ -16,7 +16,7 @@ const CTA = () => {
         <div>
           {/* Animated Heading */}
           <motion.h1
-            className="text-[42px] lg:text-[86px] text-center leading-[50px] lg:leading-[95px] tracking-[-.72px]"
+            className="text-[42px] md:text-[86px] text-center tracking-[-.72px] leading-[50px] md:leading-[86px]"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -33,7 +33,7 @@ const CTA = () => {
 
           {/* Animated Paragraph */}
           <motion.p
-            className="font-[600] text-center mt-8"
+            className="font-[600] text-center mt-14"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

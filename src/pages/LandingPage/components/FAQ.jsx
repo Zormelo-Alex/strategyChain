@@ -49,7 +49,7 @@ const FAQ = () => {
         <Badge className="text-[14px]">
           FAQ
         </Badge>
-        <h2 className="text-[42px] md:text-[50px] text-center md:text-start leading-[70px] md:leading-[95px] tracking-[-.72px]">
+        <h2 className="text-[32px] sm:text-[42px] lg:text-[50px] leading-[60px] text-center md:text-start md:leading-[95px] tracking-[-.72px]">
           Freque<span className="gradient-text-default">ntly Asked Que</span>
           stions
         </h2>
