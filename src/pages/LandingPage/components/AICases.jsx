@@ -28,7 +28,7 @@ const AICases = () => {
               <span className="gradient-text-default">
                 Compatible with multiple
               </span>{" "}
-              <br />
+              <br className="hidden lg:flex"/>
               <span className="gradient-text-default">
                 AI models, and onchain strategies.
               </span>

@@ -45,7 +45,7 @@ const Description = () => {
           </motion.p>
 
           {/* Third Text Line */}
-          <motion.p className="flex gap-2 flex-wrap items-center" variants={textVariants}>
+          <motion.p className="lg:flex gap-2 flex-wrap items-center" variants={textVariants}>
             You,{" "}
             <span className="gradient-text-default">our Kings and Queens</span>{" "}
             <motion.span variants={imageVariants}>

@@ -55,7 +55,8 @@ const HIWs = () => {
                 <span className="gradient-text-default">
                   How does the process work
                 </span>
-                <br />
+                {" "}
+                <br className="hidden lg:flex"/>
                 <span className="gradient-text-default">
                   to provide you service?
                 </span>
