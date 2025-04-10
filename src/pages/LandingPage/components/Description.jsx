@@ -66,7 +66,7 @@ const Description = () => {
           transition={{ duration: 1, delay: 1.2 }}
           className="mt-10"
         >
-          <Button className="text-[14px] px-6 py-3 capitalize" onClick={()=> navigate("/app/dashboard")}>
+          <Button className="text-[14px] px-6 py-3 capitalize" onClick={()=> navigate("/app/deploy-an-agent")}>
             Deploy an Agent Now
           </Button>
         </motion.div>

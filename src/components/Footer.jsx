@@ -15,8 +15,8 @@ const Footer = () => {
     {
       title: "Agent Explorer",
       links: [
-        { name: "AI Agents", url: "#" },
-        { name: "Deploy Agent", url: "#" },
+        { name: "AI Agents", url: "/app/deploy-an-agent" },
+        { name: "Deploy Agent", url: "/app/deploy-an-agent" },
       ],
     },
     {

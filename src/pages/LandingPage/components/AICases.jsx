@@ -56,7 +56,7 @@ const AICases = () => {
                 </motion.button>
 
                 <motion.div whileTap={{ scale: 0.95 }}>
-                  <Button className="px-6 py-3" onClick={()=> navigate("/app/dashboard")}>Deploy Agent</Button>
+                  <Button className="px-6 py-3" onClick={()=> navigate("/app/deploy-an-agent")}>Deploy Agent</Button>
                 </motion.div>
               </div>
             </motion.div>

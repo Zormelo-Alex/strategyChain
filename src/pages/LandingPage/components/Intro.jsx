@@ -55,7 +55,7 @@ const Intro = () => {
                 <motion.div whileTap={{ scale: 0.95 }}>
                   <Button
                     className="px-6 py-3"
-                    onClick={() => navigate("/app/dashboard")}
+                    onClick={() => navigate("/app/deploy-an-agent")}
                   >
                     Deploy Agent
                   </Button>
