@@ -65,7 +65,7 @@ const Main = () => {
           <input
             type="text"
             placeholder="Type something here"
-            className="w-full bg-transparent text-white p-4 px-[10px] placeholder-gray-400 outline-none"
+            className="w-full bg-transparent text-white p-4 px-[15px] text-[14px] placeholder-gray-400 outline-none"
           />
           <button className=" text-(--primaryColor) cursor-pointer text-xl hover:text-blue-500 transition-all ease-in">
             <MdSend />
