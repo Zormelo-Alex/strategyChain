@@ -4,6 +4,7 @@ import { IoMdArrowForward } from "react-icons/io";
 import { Button } from "../../../components";
 import img1 from "../assets/image1.png";
 import img2 from "../assets/image2.png";
+import { useNavigate } from "react-router-dom";
 
 const textVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -16,6 +17,7 @@ const imageVariants = {
 };
 
 const Description = () => {
+  const navigate = useNavigate()
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -64,7 +66,7 @@ const Description = () => {
           transition={{ duration: 1, delay: 1.2 }}
           className="mt-10"
         >
-          <Button className="text-[14px] px-6 py-3 capitalize">
+          <Button className="text-[14px] px-6 py-3 capitalize" onClick={()=> navigate("/app/dashboard")}>
             Deploy an Agent Now
           </Button>
         </motion.div>

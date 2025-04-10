@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMenu, IoClose } from "react-icons/io5";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [hasShadow, setHasShadow] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +66,10 @@ const Navbar = () => {
 
         {/* Deploy Agent Button - Hidden on Mobile */}
         <div className="hidden md:block">
-          <Button className="px-6 py-3">
+          <Button
+            className="px-6 py-3"
+            onClick={() => navigate("/app/dashboard")}
+          >
             Deploy Agent
           </Button>
         </div>
@@ -111,7 +116,10 @@ const Navbar = () => {
             )}
 
             {/* Deploy Agent Button for Mobile */}
-            <Button className="border border-[#ffffff0d] px-6 py-3 bg-[#0f0f0f43]">
+            <Button
+              className="border border-[#ffffff0d] px-6 py-3 bg-[#0f0f0f43]"
+              onClick={() => navigate("/app/dashboard")}
+            >
               Deploy Agent
             </Button>
           </motion.div>

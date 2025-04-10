@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import img from "../assets/image11.png";
 import { Badge, Button } from "../../../components";
+import { useNavigate } from "react-router-dom";
 
 const AICases = () => {
+  const navigate = useNavigate()
   return (
     <div className="p-4 lg:px-[4rem] py-[6rem] flex justify-center">
       <motion.div
@@ -48,13 +50,13 @@ const AICases = () => {
                 <motion.button
                   className="px-4 py-2 cursor-pointer"
                   whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.95 }} onClick={()=> navigate("/app/dashboard")}
                 >
                   Explore Agents
                 </motion.button>
 
                 <motion.div whileTap={{ scale: 0.95 }}>
-                  <Button className="px-6 py-3">Deploy Agent</Button>
+                  <Button className="px-6 py-3" onClick={()=> navigate("/app/dashboard")}>Deploy Agent</Button>
                 </motion.div>
               </div>
             </motion.div>

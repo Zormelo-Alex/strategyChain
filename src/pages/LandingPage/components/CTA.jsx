@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { AnimatedBG, Button } from "../../../components";
+import { useNavigate } from "react-router-dom";
 
 const CTA = () => {
+  const navigate = useNavigate();
   return (
     <div className="px-4 lg:px-[4rem] flex justify-center relative">
       <AnimatedBG />
@@ -57,12 +59,18 @@ const CTA = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
+                onClick={() => navigate("/app/dashboard")}
               >
                 Explore Agents
               </motion.button>
 
               <motion.div whileTap={{ scale: 0.95 }}>
-                <Button className="px-4 py-2">Deploy Agent</Button>
+                <Button
+                  className="px-4 py-2"
+                  onClick={() => navigate("/app/dashboard")}
+                >
+                  Deploy Agent
+                </Button>
               </motion.div>
             </div>
           </motion.div>

@@ -1,8 +1,10 @@
 import React from "react";
 import { AnimatedBG, Button } from "../../../components";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Intro = () => {
+  const navigate = useNavigate()
   return (
     <>
       <div className="min-h-[700px] h-screen relative">
@@ -45,12 +47,18 @@ const Intro = () => {
                   className="px-4 py-2 cursor-pointer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => navigate("/app/dashboard")}
                 >
                   Explore Agents
                 </motion.button>
 
                 <motion.div whileTap={{ scale: 0.95 }}>
-                  <Button className="px-6 py-3">Deploy Agent</Button>
+                  <Button
+                    className="px-6 py-3"
+                    onClick={() => navigate("/app/dashboard")}
+                  >
+                    Deploy Agent
+                  </Button>
                 </motion.div>
               </div>
             </motion.div>
