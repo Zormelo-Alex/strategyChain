@@ -31,7 +31,7 @@ const Navbar = () => {
         transition={{ type: "spring", stiffness: 100, damping: 12 }}
         className={`font-man fixed z-50 flex items-center justify-between text-white py-[10px] transition-all duration-[1000ms] origin-center w-full ${
           hasShadow
-            ? "glass rounded-[10px] w-[90%]! md:max-w-[815px] left-1/2 transform -translate-x-1/2 top-4 px-2"
+            ? "glass backdrop-blur-[10px] rounded-[10px] w-[90%]! md:max-w-[815px] left-1/2 transform -translate-x-1/2 top-4 px-2"
             : "bg-transparent left-1/2 transform -translate-x-1/2 top-0 border-none px-8"
         }`}
       >
