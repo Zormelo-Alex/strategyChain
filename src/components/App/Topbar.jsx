@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoSidebarCollapse } from "react-icons/go";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { useAccount } from "wagmi";
 
 const Topbar = ({ onToggleSidebar }) => {
   const [isMenuOpen, setisMenuOpen] = useState(false);
+  const {isConnected} = useAccount();
 
   const links = [
     { name: "Product", url: "#" },
@@ -42,14 +44,15 @@ const Topbar = ({ onToggleSidebar }) => {
           ))}
         </div>
         <div className="flex gap-4 items-center">
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
             className="bg-[#1485DB] text-white text-[14px] py-[10px] px-[18px] rounded-[10px] hover:bg-[#0e6fbf] transition-colors duration-200 cursor-pointer"
           >
             Connect Wallet
-          </motion.button>
+          </motion.button> */}
+          <w3m-button/>
           <button
             onClick={() => setisMenuOpen(!isMenuOpen)}
             className="md:hidden text-white text-2xl focus:outline-none"

@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import { Deploy, ErrorPage, LandingPage } from "../pages";
+import { AgentExplorer, Deploy, ErrorPage, LandingPage } from "../pages";
 import Layout from "../layout/Layout";
 import AppLayout from "../layout/AppLayout";
 
@@ -19,7 +19,8 @@ const routes = [
         element: <AppLayout />,
         children: [
           { path: "dashboard", element: <LandingPage /> },
-          { path: "deploy-an-agent", element: <Deploy/> },
+          { path: "deploy-an-agent", element: <Deploy /> },
+          { path: "agent-explorer", element: <AgentExplorer /> },
         ],
       },
     ],
