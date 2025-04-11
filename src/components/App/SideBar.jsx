@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { TbChartAreaLine } from "react-icons/tb";
@@ -6,11 +6,10 @@ import { CiSearch } from "react-icons/ci";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Dashboard, Parameters, Routes } from "../../routes/routeData";
-import { GoChevronLeft } from "react-icons/go";
-import { GoChevronRight } from "react-icons/go";
+import { GoChevronRight, GoSidebarExpand, GoChevronLeft } from "react-icons/go";
 import { Documentation } from "../../routes/routeData";
 
-const SideBar = () => {
+const SideBar = ({ onToggleSidebar }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [expandedRoutes, setExpandedRoutes] = useState({});
 
@@ -58,33 +57,41 @@ const SideBar = () => {
             {isOpen ? <GoChevronLeft /> : <GoChevronRight />}
           </div>
         </div>
-        <Link
-          to={"/"}
-          className="flex items-center justify-start  gap-1 my-9 min-h-[30px]"
-        >
-          <AnimatePresence>
-            <div className="" onClick={() => setIsOpen(!isOpen)}>
-              <img
-                src="/logo.png"
-                alt="logo"
-                className="h-[30px] object-contain"
-              />
-            </div>
-            {isOpen && (
-              <motion.h1
-                variants={textAnimation}
-                initial={"hidden"}
-                animate={"show"}
-                exit={"hidden"}
-                className=""
-              >
-                <p className="text-white font-[600] text-[20px] tracking-wide leading-0.5">
-                  Strategy.Chain
-                </p>
-              </motion.h1>
-            )}
-          </AnimatePresence>
-        </Link>
+        <div className="flex items-center justify-between">
+          <Link
+            to={"/"}
+            className="flex items-center justify-start  gap-1 my-9 min-h-[30px]"
+          >
+            <AnimatePresence>
+              <div className="" onClick={() => setIsOpen(!isOpen)}>
+                <img
+                  src="/logo.png"
+                  alt="logo"
+                  className="h-[30px] object-contain"
+                />
+              </div>
+              {isOpen && (
+                <motion.h1
+                  variants={textAnimation}
+                  initial={"hidden"}
+                  animate={"show"}
+                  exit={"hidden"}
+                  className=""
+                >
+                  <p className="text-white font-[600] text-[20px] tracking-wide leading-0.5">
+                    Strategy.Chain
+                  </p>
+                </motion.h1>
+              )}
+            </AnimatePresence>
+          </Link>
+          <div
+            className=" text-white cursor-pointer md:hidden"
+            onClick={onToggleSidebar}
+          >
+            <GoSidebarExpand className="text-[25px]" />
+          </div>
+        </div>
         <div>
           <AnimatePresence>
             {isOpen ? (
@@ -162,9 +169,12 @@ const SideBar = () => {
                             <NavLink
                               title={!isOpen && child.name?.toLowerCase()}
                               to={child.path}
-                              onClick={() =>
-                                toggleRouteExpansion(expandedRoutes[route.name])
-                              }
+                              onClick={() => {
+                                toggleRouteExpansion(
+                                  expandedRoutes[route.name]
+                                );
+                                onToggleSidebar();
+                              }}
                               className={({ isActive }) =>
                                 `p-3 pl-8 py-6 flex justify-between rounded-[10px] whitespace-nowrap items-center ease-in duration-150 hover:ease-in hover:text-primary_color h-6 ${
                                   isActive &&
@@ -201,6 +211,7 @@ const SideBar = () => {
                     title={!isOpen && route.name?.toLowerCase()}
                     key={index}
                     to={route.path}
+                    onClick={onToggleSidebar}
                     className={({ isActive }) =>
                       `p-3 py-6 flex justify-between whitespace-nowrap items-center rounded-[10px] ease-in duration-150 hover:ease-in hover:bg-primary_color_hover hover:text-primary_color h-6 cursor-pointer ${
                         isActive && "bg-[#70BEFA33] text-[#70BEFA]"
@@ -283,9 +294,12 @@ const SideBar = () => {
                             <NavLink
                               title={!isOpen && child.name?.toLowerCase()}
                               to={child.path}
-                              onClick={() =>
-                                toggleRouteExpansion(expandedRoutes[route.name])
-                              }
+                              onClick={() => {
+                                toggleRouteExpansion(
+                                  expandedRoutes[route.name]
+                                );
+                                onToggleSidebar();
+                              }}
                               className={({ isActive }) =>
                                 `p-3 pl-8 py-6 flex justify-between rounded-[10px] whitespace-nowrap items-center ease-in duration-150 hover:ease-in hover:text-primary_color h-6 ${
                                   isActive &&
@@ -321,6 +335,7 @@ const SideBar = () => {
                   <NavLink
                     title={!isOpen && route.name?.toLowerCase()}
                     key={index}
+                    onClick={onToggleSidebar}
                     to={route.path}
                     className={({ isActive }) =>
                       `p-3 py-6 flex justify-between whitespace-nowrap items-center rounded-[10px] ease-in duration-150 hover:ease-in hover:bg-primary_color_hover hover:text-primary_color h-6 cursor-pointer ${
@@ -404,9 +419,12 @@ const SideBar = () => {
                             <NavLink
                               title={!isOpen && child.name?.toLowerCase()}
                               to={child.path}
-                              onClick={() =>
-                                toggleRouteExpansion(expandedRoutes[route.name])
-                              }
+                              onClick={() => {
+                                toggleRouteExpansion(
+                                  expandedRoutes[route.name]
+                                );
+                                onToggleSidebar();
+                              }}
                               className={({ isActive }) =>
                                 `p-3 pl-8 py-6 flex justify-between rounded-[10px] whitespace-nowrap items-center ease-in duration-150 hover:ease-in hover:text-primary_color h-6 ${
                                   isActive &&
@@ -442,6 +460,7 @@ const SideBar = () => {
                   <NavLink
                     title={!isOpen && route.name?.toLowerCase()}
                     key={index}
+                    onClick={onToggleSidebar}
                     to={route.path}
                     className={({ isActive }) =>
                       `p-3 py-6 flex justify-between whitespace-nowrap items-center rounded-[10px] ease-in duration-150 hover:ease-in hover:bg-primary_color_hover hover:text-primary_color h-6 cursor-pointer ${
@@ -525,9 +544,12 @@ const SideBar = () => {
                             <NavLink
                               title={!isOpen && child.name?.toLowerCase()}
                               to={child.path}
-                              onClick={() =>
-                                toggleRouteExpansion(expandedRoutes[route.name])
-                              }
+                              onClick={() => {
+                                toggleRouteExpansion(
+                                  expandedRoutes[route.name]
+                                );
+                                onToggleSidebar();
+                              }}
                               className={({ isActive }) =>
                                 `p-3 pl-8 py-6 flex justify-between rounded-[10px] whitespace-nowrap items-center ease-in duration-150 hover:ease-in hover:text-primary_color h-6 ${
                                   isActive &&
@@ -563,6 +585,7 @@ const SideBar = () => {
                   <NavLink
                     title={!isOpen && route.name?.toLowerCase()}
                     key={index}
+                    onClick={onToggleSidebar}
                     to={route.path}
                     className={({ isActive }) =>
                       `p-3 py-6 flex justify-between whitespace-nowrap items-center rounded-[10px] ease-in duration-150 hover:ease-in hover:bg-primary_color_hover hover:text-primary_color h-6 cursor-pointer ${
