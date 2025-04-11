@@ -1,19 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { toast } from "react-toastify";
 import { GoSidebarCollapse } from "react-icons/go";
 import { IoMenu, IoClose } from "react-icons/io5";
-import Button from "../Button";
 
 const Topbar = ({ onToggleSidebar }) => {
   const [isMenuOpen, setisMenuOpen] = useState(false);
-
-  const handleCloseMenu = (e) => {
-    if (e.target === e.currentTarget) {
-      setisMenuOpen(false);
-    }
-  };
 
   const links = [
     { name: "Product", url: "#" },
